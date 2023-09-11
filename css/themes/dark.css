@@ -1,8 +1,11 @@
 :root {
     --page-background-color: #121212;
     --text-color: #ffffff;
+    --text-error-color: #e12c1a;
     --title-color: #cccccc;
     --button-background-color: #b9372d;
+    --settings-modal-border-color: #ffffff;
+    --settings-modal-error-border-color: #e12c1a;
     --switch-background-color: #b9372d;
     --range-input-thumb-background-color: #ccc;
     --button-hover-background-color: #e04e41;

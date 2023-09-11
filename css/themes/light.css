@@ -2,7 +2,10 @@
     --page-background-color: #e5e5e5;
     --text-color: #333333;
     --title-color: #555555;
+    --text-error-color: #cc2e20;
+    --settings-modal-error-border-color: #cc2e20;
     --range-input-thumb-background-color: #ababab;
+    --settings-modal-border-color: #000;
     --button-background-color: #0088FF;
     --switch-background-color: #0088FF;
     --button-hover-background-color: #0077E0;

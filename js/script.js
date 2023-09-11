@@ -331,13 +331,13 @@ class MatchGridSettings {
       cardWidthLabel.innerHTML = `Cards width - ${e.target.value}px`;
       this.currentGame.width = e.target.value;
     });
-    columnsInput.addEventListener('input', (e) => {
+    columnsInput.addEventListener('change', (e) => {
       columnsLabel.innerHTML = `Columns - ${e.target.value}`;
       this.currentGame.numCols = e.target.value;
       this.validate()
 
     });
-    rowsInput.addEventListener('input', (e) => {
+    rowsInput.addEventListener('change', (e) => {
       rowsLabel.innerHTML = `Rows - ${e.target.value}`;
       this.currentGame.numRows = e.target.value;
 
@@ -370,14 +370,19 @@ class MatchGridSettings {
   }
 
   validate() {
-    const {closeSettingsButton} = this.htmlElements
+    const {closeSettingsButton, rowsLabel, columnsLabel, settingsContainer} = this.htmlElements
 
-    const isEven = (this.currentGame.numCols * this.currentGame.numRows)%2 === 0;
-
+    const isEven = (this.currentGame.numCols * this.currentGame.numRows)% 2 === 0;
     if (!isEven) {
       closeSettingsButton.setAttribute("disabled", 'true');
+      rowsLabel.classList.add('error')
+      columnsLabel.classList.add('error')
+      settingsContainer.classList.add('settings__modal__error')
     } else {
       closeSettingsButton.removeAttribute("disabled");
+      rowsLabel.classList.remove('error')
+      columnsLabel.classList.remove('error')
+      settingsContainer.classList.remove('settings__modal__error')
 
     }
 
