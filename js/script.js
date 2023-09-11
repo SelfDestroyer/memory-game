@@ -520,7 +520,9 @@ class MatchGrid {
   }
 
   exitToMenu() {
-    const {menuContainer, gameContainer, modalContainer} = this.htmlElements;
+    const {menuContainer, gameContainer, modalContainer, exitButton, restartButton} = this.htmlElements;
+    exitButton.removeAttribute('disabled')
+    restartButton.removeAttribute('disabled')
     hideDOMElements([gameContainer, modalContainer]);
     showDOMElements([menuContainer]);
     this.currentGrid.clearGrid();
