@@ -121,6 +121,7 @@ body {
     align-items: center;
     position: absolute;
     background-color: var(--modal-background-color);
+    z-index: 20;
 }
 
 .modal__title {

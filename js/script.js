@@ -58,9 +58,11 @@ class Grid {
     const gridContainer = document.querySelector('.grid__container');
     const moves = document.querySelector('#moves');
     const score = document.querySelector('#score');
+    const restartButton = document.querySelector('#restart__button');
+    const exitButton = document.querySelector('#exit__button');
 
     this.htmlElements = {
-      gridContainer: gridContainer, moves: moves, score: score,
+      gridContainer: gridContainer, moves: moves, score: score, restartButton: restartButton, exitButton: exitButton
     };
   }
 
@@ -84,7 +86,7 @@ class Grid {
   }
 
   events() {
-    const {moves, score} = this.htmlElements;
+    const {moves, score, restartButton, exitButton} = this.htmlElements;
 
     document.addEventListener('click', (e) => {
 
@@ -104,6 +106,8 @@ class Grid {
           this.matchedCards += 1;
 
           if (this.matchedCards === this.grid.length / 2) {
+            restartButton.setAttribute('disabled', '')
+            exitButton.setAttribute('disabled', '')
             setTimeout(() => document.dispatchEvent(new Event('victory')), 600);
           }
 
@@ -458,6 +462,8 @@ class MatchGrid {
     exitToMenuButton.addEventListener('click', () => this.exitToMenu());
     playAgainButton.addEventListener('click', () => {
       hideDOMElements([modalContainer]);
+      exitButton.removeAttribute('disabled')
+      restartButton.removeAttribute('disabled')
       this.restartGame();
       this.gameTimer.timeLeft = this.gameTimer.timeLimit;
       this.gameTimer.startTimer();
