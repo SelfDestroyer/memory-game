@@ -1,0 +1,16 @@
+:root {
+    --page-background-color: #121212;
+    --text-color: #ffffff;
+    --title-color: #cccccc;
+    --button-background-color: #b9372d;
+    --switch-background-color: #b9372d;
+    --range-input-thumb-background-color: #ccc;
+    --button-hover-background-color: #e04e41;
+    --button-active-background-color: #932a20;
+    --button-disabled-background-color: #521510;
+    --button-text-color: #ffffff;
+    --front-card-color-background-color: #1a1a1a;
+    --back-card-color-background-color: #282828;
+    --gamezone-background-color: #1a1a1a;
+    --modal-background-color: #1a1a1a;
+}
