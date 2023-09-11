@@ -368,9 +368,6 @@ class MatchGridSettings {
   validate() {
     const {closeSettingsButton} = this.htmlElements
 
-    console.log(this.currentGame.numCols);
-    console.log(this.currentGame.numRows);
-
     const isEven = (this.currentGame.numCols * this.currentGame.numRows)%2 === 0;
 
     if (!isEven) {
