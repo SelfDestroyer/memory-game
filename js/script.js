@@ -372,6 +372,9 @@ class MatchGridSettings {
 
     if (!isEven) {
       closeSettingsButton.setAttribute("disabled", 'true');
+    } else {
+      closeSettingsButton.removeAttribute("disabled");
+
     }
 
   }
